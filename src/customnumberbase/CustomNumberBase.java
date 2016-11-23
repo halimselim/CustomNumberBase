@@ -38,7 +38,6 @@ public class CustomNumberBase {
             i = fromBase10(i, sb);
         }
         return sb.toString();
-//        return sb.reverse().toString();
     }
 
     private static BigInteger fromBase10(BigInteger i, final StringBuilder sb) {
@@ -63,7 +62,6 @@ public class CustomNumberBase {
     private static BigInteger toBase10(String[] symbols) {
         BigInteger n = new BigInteger("0");
         for (int i = 0; i< symbols.length; i++) {
-//        for (int i = symbols.length - 1; i >= 0; i--) {
             n = n.add(toBase10(findIndex(symbols2, symbols[i]), i));
         }
         return n;
@@ -74,6 +72,4 @@ public class CustomNumberBase {
         return ((new BigInteger(n.toString())).multiply((BASE2.pow(pow))));
     }
     
-
-
 }
